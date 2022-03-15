@@ -39,6 +39,7 @@ describe("#Routes - test suite for api response", () => {
         const params = TestUtil.defaultHandleParams();
         params.request.method = 'GET';
         params.request.url = '/home';
+
         const mockFileStream = TestUtil.generateReadableStream(['data']);
         
         jest.spyOn(
@@ -63,6 +64,7 @@ describe("#Routes - test suite for api response", () => {
         const params = TestUtil.defaultHandleParams();
         params.request.method = 'GET';
         params.request.url = '/controller';
+
         const mockFileStream = TestUtil.generateReadableStream(['data']);
         
         jest.spyOn(
@@ -85,11 +87,14 @@ describe("#Routes - test suite for api response", () => {
 
 
     test(`GET /index.html - should respond with file stream`, async () => {
-        const params = TestUtil.defaultHandleParams();
         const fileName = '/index.html';
+        const expectedType = '.html';
+        
+        const params = TestUtil.defaultHandleParams();
         params.request.method = 'GET';
         params.request.url = fileName;
-        const expectedType = '.html';
+        
+
         const mockFileStream = TestUtil.generateReadableStream(['data']);
         
         jest.spyOn(
@@ -118,11 +123,14 @@ describe("#Routes - test suite for api response", () => {
     });
 
     test(`GET /file.ext - should respond with file stream`, async () => {
-        const params = TestUtil.defaultHandleParams();
         const fileName = '/file.ext';
+        const expectedType = '.ext';
+
+        const params = TestUtil.defaultHandleParams();
         params.request.method = 'GET';
         params.request.url = fileName;
-        const expectedType = '.ext';
+
+
         const mockFileStream = TestUtil.generateReadableStream(['data']);
         
         jest.spyOn(
@@ -148,7 +156,6 @@ describe("#Routes - test suite for api response", () => {
 
     test(`POST /unknown - given a inexistent route, it should respond with 404`, async () => {
         const params = TestUtil.defaultHandleParams();
-
         params.request.method = 'POST';
         params.request.url = '/unknown';
 
@@ -163,6 +170,7 @@ describe("#Routes - test suite for api response", () => {
             const params = TestUtil.defaultHandleParams();
             params.request.method = 'GET';
             params.request.url = '/index.png';
+
             jest.spyOn(
                 Controller.prototype,
                 Controller.prototype.getFileStream.name
@@ -178,6 +186,7 @@ describe("#Routes - test suite for api response", () => {
             const params = TestUtil.defaultHandleParams();
             params.request.method = 'GET';
             params.request.url = '/index.png';
+
             jest.spyOn(
                 Controller.prototype,
                 Controller.prototype.getFileStream.name
@@ -188,22 +197,5 @@ describe("#Routes - test suite for api response", () => {
             expect(params.response.writeHead).toHaveBeenCalledWith(500);
             expect(params.response.end).toHaveBeenCalled();
         });
-
-        ////DAVID
-        
-        // test('given an error it should respond with 500', async () => {
-        //     const params = TestUtil.defaultHandleParams()
-        //     params.request.method = 'GET'
-        //     params.request.url = '/index.png'
-        //     jest.spyOn(
-        //     Controller.prototype,
-        //     Controller.prototype.getFileStream.name,
-        //     ).mockRejectedValue(new Error('Error:'))
-
-        //     await handler(...params.values())
-
-        //     expect(params.response.writeHead).toHaveBeenCalledWith(500)
-        //     expect(params.response.end).toHaveBeenCalled()
-        // })
-    })
-})
+    });
+});
