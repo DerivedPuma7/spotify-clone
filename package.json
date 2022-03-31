@@ -8,14 +8,14 @@
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
 
-    "test": "set LOG_DISABLED=true && set NODE_OPTIONS='--experimental-vm-modules --no-warnings' && npx jest --no-cache",
-    "test:watch": "set LOG_DISABLED=true && set NODE_OPTIONS='--experimental-vm-modules --no-warnings' && npx jest --no-cache --watchAll",
-    "test:coverage": "set LOG_DISABLED=true && set NODE_OPTIONS='--experimental-vm-modules --no-warnings' && npx jest --no-cache --coverage tests/unit",
-    "test:e2e": "set LOG_DISABLED=true && set NODE_OPTIONS='--experimental-vm-modules --no-warnings' && npx jest --no-cache tests/e2e",
+    "test": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache",
+    "test:watch": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache --watchAll",
+    "test:coverage": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache --coverage tests/unit",
+    "test:e2e": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache tests/e2e",
 
     "live-reload:docker": "docker-compose up --build live-reload",
 
-    "test:docker": "docker-compose up --build test",
+    "test:docker": "docker-compose up --build test -D",
     "test:watch:docker": "docker-compose up --build test-watch",
     "test:coverage:docker": "docker-compose up --build test-coverage",
 

@@ -20,8 +20,6 @@ async function routes(request, response){
 
     const { method, url } = request;
 
-    console.log(url);
-
     if(method === 'GET' && url === '/'){
         response.writeHead(302, {
             'Location': location.home

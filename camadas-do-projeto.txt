@@ -5,3 +5,9 @@ server
     -server = responsavel por criar o servidor (mas não instancia) 
     -index = instancia o servidor e expor para a web (lado da infra)
     -config = tudo que for estático do projeto
+
+cliente
+    -service = tudo que é regra de negocio ou processamento
+    -controller = é o intermédio entre a view e a service
+    -view = tudo que é elemento HTML (visualização)
+    -index = factory = quem instancia tudo
