@@ -15,7 +15,7 @@
 
     "live-reload:docker": "docker-compose up --build live-reload",
 
-    "test:docker": "docker-compose up --build test -D",
+    "test:docker": "docker-compose up --build test",
     "test:watch:docker": "docker-compose up --build test-watch",
     "test:coverage:docker": "docker-compose up --build test-coverage",
 
