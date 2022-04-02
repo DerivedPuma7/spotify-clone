@@ -22,14 +22,19 @@ export default {
     },
     pages: {
         homeHTML: 'home/index.html',
-        controllerHTML: 'controller/index.html'
+        controllerHTML: 'controller/index.html',
+        landingHTML: 'landing/index.html'
     },
     location:{
-        home: '/home'
+        home: '/home',
+        landing: '/landing'
     },
     constants: {
         CONTENT_TYPE: {
-            '.html': 'text.html',
+            '.svg': 'svg',
+            '.jpg': 'jpeg',
+            '.html': 'text/html',
+            '.png': 'png',
             '.css': 'text/css',
             '.js': 'text/javascript'
         },

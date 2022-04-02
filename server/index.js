@@ -4,5 +4,5 @@ import config from './config.js';
 
 server.listen(config.port)
 .on('listening', () => { 
-    logger.info('rodandooo!!!!!!!!');
+    logger.info(`rodandooo na porta ${config.port}`);
 });

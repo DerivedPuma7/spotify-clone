@@ -18,8 +18,12 @@
   <main class="container">
     <aside class="container__sidebar hide">
       <div class="container__sidebar__brand">
-        <img class="sidebar__brand" src="./home/assets/spotify.png" alt="spotify" />
-        <h1>spotify</h1>
+        <a href="/">
+          <img class="sidebar__brand" src="./home/assets/spotify.png" alt="spotify" />
+        </a>
+        <a href="/" style="text-decoration: none; color: white">
+          <h1>spotify</h1>
+        </a>
       </div>
 
       <nav>
@@ -51,8 +55,9 @@
           <i class="fas fa-chevron-right container__section__arrow hide"></i>
         </div>
         <div class="container__section__user">
-          <img src="./home/assets/user-eg.jpg" alt="user" />
-          Erick Wendel
+          <!-- <img src="./home/assets/user-eg.jpg" alt="user" /> -->
+          <img src="./home/assets/perfil.jpeg" alt="user" />
+          Gustavo Figueiredo
         </div>
       </div>
 
@@ -88,7 +93,7 @@
               <div>
                 <h4 class="hide">Node.js audio processing</h4>
                 <p>
-                  Using Node.js in practice without frameworks, with cornflakes, chocolate and mustard
+                  Using Node.js in practice without frameworks
                 </p>
                 <div class="container__section__content__cards__player">
                   <button type="button">
@@ -110,9 +115,9 @@
               <div>
                 <h4 class="hide">Node.js Wizards how they live and what spells they use</h4>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                  delectus commodi fugiat in necessitatibus rem ab veritatis
-                  atque tempore!
+                  Let's find out more about the magic of Node.js Streams. 
+                  How a true JS Expert deals with then. The power of audio on demand.
+                  Everything here. Does't even look like it's the real world.
                 </p>
                 <div class="container__section__content__cards__player">
                   <button type="button">
@@ -174,14 +179,12 @@
   </div>
   <script src="./home/js/animation.js"></script>
 
-  <!-- prevent browser cache -->
   <script>
+    //  bypass prevent cache
     window.onload = () => {
-      //esse id n serve pra nada, apenas pro browser achar que é um arquivo diferente e assim vamos ignorar o cache
       document.getElementById('audio').src = '/stream?id=' + Date.now();
     }
   </script>
-
 </body>
 
 </html>
