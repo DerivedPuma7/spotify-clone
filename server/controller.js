@@ -21,10 +21,12 @@ export class Controller {
         const cmd = command.toLowerCase();
         if(cmd.includes('start')) {
             this.service.startStreamming();
+            return result;
         }
     
         if(cmd.includes('stop')) {
             this.service.stopStreamming();
+            return result;
         }
 
         const chosenFx = await this.service.readFxByName(cmd);
