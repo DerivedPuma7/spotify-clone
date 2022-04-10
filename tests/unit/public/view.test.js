@@ -36,7 +36,7 @@ describe("#View - test suite for view layer", () => {
         view.changeCommandBtnsVisibility();
 
         expect(btn.classList.add).toHaveBeenCalledWith('unassigned');
-        expect(btn.onclick.name).toStrictEqual('onclickReset');
+        expect(btn.onclick.name).toStrictEqual('onClickReset');
         expect(() => btn.onclick()).not.toThrow();
     });
 
@@ -52,7 +52,7 @@ describe("#View - test suite for view layer", () => {
 
         expect(btn.classList.add).not.toHaveBeenCalledWith();
         expect(btn.classList.remove).toHaveBeenCalledWith('unassigned');
-        expect(btn.onclick.name).toStrictEqual('onclickReset');
+        expect(btn.onclick.name).toStrictEqual('onClickReset');
         expect(() => btn.onclick()).not.toThrow();
     });
 
