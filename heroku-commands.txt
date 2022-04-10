@@ -1,0 +1,8 @@
+heroku.yml
+npm i -g heroku
+heroku login
+
+git init
+npx gitignore node
+
+git add . && git commit -m "my first deploy"
