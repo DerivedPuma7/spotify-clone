@@ -6,3 +6,15 @@ git init
 npx gitignore node
 
 git add . && git commit -m "my first deploy"
+
+heroku apps:create derivedpuma7-spotify-clone
+git remote -v
+heroku stack:set container
+git push heroku master
+heroku open
+
+heroku logs -t -a derivedpuma7-spotify-clone
+
+REMOVER A APLICAÇÃO DO AR
+heroku apps:delete derivedpuma7-spotify-clone
+rn -rf .git
