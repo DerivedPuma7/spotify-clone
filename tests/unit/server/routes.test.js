@@ -19,20 +19,29 @@ describe("#Routes - test suite for api response", () => {
         jest.clearAllMocks();
     })
 
-    test(`GET / - should redirect to home page`, async () => {
+    test(`GET / - should respond with ${pages.landingHTML} file stream`, async () => {
         const params = TestUtil.defaultHandleParams();
         params.request.method = 'GET';
         params.request.url = '/';
 
+        const mockFileStream = TestUtil.generateReadableStream(['data']);
+
+        jest.spyOn(
+            Controller.prototype,
+            Controller.prototype.getFileStream.name
+        ).mockResolvedValue({
+            stream: mockFileStream
+        });
+
+        jest.spyOn(
+            mockFileStream,
+            "pipe"
+        ).mockReturnValue();
+
         await handler(...params.values());
-        
-        expect(params.response.writeHead).toBeCalledWith(
-            302, 
-            {
-                "Location": location.home
-            }
-        );
-        expect(params.response.end).toHaveBeenCalled();
+
+        expect(Controller.prototype.getFileStream).toBeCalledWith(pages.landingHTML);
+        expect(mockFileStream.pipe).toHaveBeenCalledWith(params.response);
     });
 
     test(`GET /home - should respond with ${pages.homeHTML} file stream`, async () => {
