@@ -35,7 +35,7 @@ describe('API E2E Suite Test', () => {
     describe('client workflow', () => {
 
         async function getTestServer() {
-            const getSuperTest = port => superTest(`http:localhost:${port}`);
+            const getSuperTest = port => superTest(`http://localhost:${port}`);
             const port = await getAvailablePort();
 
             return new Promise((resolve, reject) => {
