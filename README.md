@@ -6,7 +6,7 @@
 
 ## Description
 
-O objetivo do projeto é explorar as Node.js Streams, com o client consumindo uma áudio
+O objetivo do projeto é explorar as Node.js Streams, com o client consumindo um áudio
 fornecido pelo backend. Além disso, temos os efeitos sonoros que podem ser adicionados à 
 transmissão principal sem pausas, tudo simultâneo. Para isso, foi utilizado o Sox, uma ferramenta para tratar e mergear os áudios sob demanda. Esse foi o projeto desenvolvido na sexta Semana JSExpert, com o mago do Javascript, Erick Wendel.
 
