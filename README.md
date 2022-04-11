@@ -12,7 +12,7 @@ transmissão principal sem pausas, tudo simultâneo. Para isso, foi utilizado o 
 
 ## How to use
 
-1. Abra a url https://github.com/DerivedPuma7/spotify-clone  
+1. Abra a url https://derivedpuma7-spotify-clone.herokuapp.com/  
 2. Clique em 'Listen Now' com o botão direito e abra em nova guia  
 3. Clique em 'Radio Controller' com o botão direito e abra em nova guia
 4. Na guia do 'Listen Now', apenas aperte o play. Não se preocupe se não sair nenhum som, isso não é pra acontecer agora  
