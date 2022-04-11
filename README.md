@@ -10,6 +10,15 @@ O objetivo do projeto é explorar as Node.js Streams, com o client consumindo um
 fornecido pelo backend. Além disso, temos os efeitos sonoros que podem ser adicionados à 
 transmissão principal sem pausas, tudo simultâneo. Para isso, foi utilizado o Sox, uma ferramenta para tratar e mergear os áudios sob demanda. Esse foi o projeto desenvolvido na sexta Semana JSExpert, com o mago do Javascript, Erick Wendel.
 
+## How to use
+
+1. Abra a url https://github.com/DerivedPuma7/spotify-clone  
+2. Clique em 'Listen Now' com o botão direito e abra em nova guia  
+3. Clique em 'Radio Controller' com o botão direito e abra em nova guia
+4. Na guia do 'Listen Now', apenas aperte o play. Não se preocupe se não sair nenhum som, isso não é pra acontecer agora  
+5. Na guia do 'Radio Controller' inicie a stream clicando em 'Start Stream'. Após isso, o som deverá começar a ser reproduzido. A partir disso, já pode testar os outros efeitos
+
+
 ## Checklist Features
 
 - Web API
